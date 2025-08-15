@@ -4,7 +4,7 @@
  */
 public class Circle implements GeometricObject {
     /** Hằng số pi dùng để tính diện tích và chu vi. */
-    private static final double pi = 3.14;
+    public static final double pi = 3.14;
 
     /** Tâm của hình tròn. */
     private Point center;
