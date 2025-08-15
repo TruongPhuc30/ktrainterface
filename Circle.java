@@ -31,6 +31,13 @@ public class Circle implements GeometricObject {
     public Point getCenter() {
         return center;
     }
+    /**
+     * nhap vao tâm của hình tròn.
+     *
+     */
+    public void setCenter(Point center) {
+        this.center = center;
+    }
 
     /**
      * Trả về bán kính của hình tròn.
@@ -41,6 +48,14 @@ public class Circle implements GeometricObject {
         return radius;
     }
 
+    /**
+     * nhap vao bán kính của hình tròn.
+     *
+     */
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+    
     /**
      * Tính diện tích của hình tròn.
      *
