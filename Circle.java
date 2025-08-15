@@ -64,7 +64,7 @@ public class Circle implements GeometricObject {
      */
     @Override
     public double getArea() {
-        return pi * radius * radius;
+        return PI * radius * radius;
     }
 
     /**
@@ -74,7 +74,7 @@ public class Circle implements GeometricObject {
      */
     @Override
     public double getPerimeter() {
-        return 2 * pi * radius;
+        return 2 * PI * radius;
     }
 
     /**
