@@ -31,6 +31,7 @@ public class Circle implements GeometricObject {
     public Point getCenter() {
         return center;
     }
+    
     /**
      * nhap vao tâm của hình tròn.
      *
