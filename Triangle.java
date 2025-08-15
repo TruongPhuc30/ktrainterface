@@ -32,9 +32,9 @@ public class Triangle implements GeometricObject {
      * @return true nếu ba điểm thẳng hàng, ngược lại false
      */
     private boolean isCollinear(Point a, Point b, Point c) {
-        double area = a.getX() * (b.getY() - c.getY()) +
-                b.getX() * (c.getY() - a.getY()) +
-                c.getX() * (a.getY() - b.getY());
+        double area = a.getX() * (b.getY() - c.getY()) 
+            + b.getX() * (c.getY() - a.getY()) 
+            + c.getX() * (a.getY() - b.getY());
         return area == 0;
     }
 
@@ -118,23 +118,9 @@ public class Triangle implements GeometricObject {
      */
     @Override
     public String getInfo() {
-        return String.format("Triangle[(%s,%s),(%s,%s),(%s,%s)]",
-                formatNumber(p1.getX()), formatNumber(p1.getY()),
-                formatNumber(p2.getX()), formatNumber(p2.getY()),
-                formatNumber(p3.getX()), formatNumber(p3.getY()));
-    }
-
-    /**
-     * Định dạng số: loại bỏ phần thập phân nếu không cần thiết.
-     *
-     * @param value Giá trị số cần định dạng
-     * @return Chuỗi biểu diễn số đã làm gọn
-     */
-    private String formatNumber(double value) {
-        if (value == (long) value) {
-            return String.format("%d", (long) value);
-        } else {
-            return String.format("%s", value);
-        }
+        return String.format("Triangle[(%.2f,%.2f),(%.2f,%.2f),(%.2f,%.2f)]",
+                p1.getX(), p1.getY(),
+                p2.getX(), p2.getY(),
+                p3.getX(), p3.getY());
     }
 }
