@@ -84,23 +84,7 @@ public class Circle implements GeometricObject {
      */
     @Override
     public String getInfo() {
-        return String.format("Circle[(%s,%s),r=%s]",
-                formatNumber(center.getX()),
-                formatNumber(center.getY()),
-                formatNumber(radius));
-    }
-
-    /**
-     * Định dạng số: loại bỏ phần thập phân nếu không cần thiết.
-     *
-     * @param value Giá trị số cần định dạng
-     * @return Chuỗi biểu diễn số đã làm gọn
-     */
-    private String formatNumber(double value) {
-        if (value == (long) value) {
-            return String.format("%d", (long) value); // Nếu là số nguyên, không hiển thị phần thập phân
-        } else {
-            return String.format("%s", value); // Giữ số thập phân nhưng không ép định dạng
-        }
+        return String.format("Circle[(%.2f,%.2f),r=%.2f]",
+                center.getX(), center.getY(), radius);
     }
 }
